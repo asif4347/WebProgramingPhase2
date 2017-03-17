@@ -57,8 +57,9 @@
         <div class="form-group">
             @Html.LabelFor(model => model.ApplyTill, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.ApplyTill, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.ApplyTill, "", new { @class = "text-danger" })
+                @*@Html.EditorFor(model => model.ApplyTill, new { htmlAttributes = new { @class = "form-control" } })*@
+               <input type="date" name="ApplyTill"/>
+                 @Html.ValidationMessageFor(model => model.ApplyTill, "", new { @class = "text-danger" })
             </div>
         </div>
 
