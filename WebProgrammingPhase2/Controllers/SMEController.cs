@@ -11,17 +11,17 @@ using WebProgrammingPhase2.Models;
 
 namespace WebProgrammingPhase2.Controllers
 {
-    public class ApplicantsController : Controller
+    public class SMEController : Controller
     {
         private DataBaseConnetion db = new DataBaseConnetion();
 
-        // GET: Applicants
+        // GET: SME
         public async Task<ActionResult> Index()
         {
             return View(await db.ApplicantDb.ToListAsync());
         }
 
-        // GET: Applicants/Details/5
+        // GET: SME/Details/5
         public async Task<ActionResult> Details(int? id)
         {
             if (id == null)
@@ -36,39 +36,30 @@ namespace WebProgrammingPhase2.Controllers
             return View(applicant);
         }
 
-        // GET: Applicants/Create
+        // GET: SME/Create
         public ActionResult Create()
         {
             return View();
         }
-        public ActionResult Success()
-        {
-            return View();
-        }
 
-        public ActionResult ViewJobs()
-        {
-            return View(db.HRPersonnel.ToList());
-        }
-
-        // POST: Applicants/Create
+        // POST: SME/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "ID,Name,Education,Department,jobTiltile,Skills")] Applicant applicant)
+        public async Task<ActionResult> Create([Bind(Include = "ID,Name,Education,Department,jobTiltile,Skills,Rating,isTop5,isHired")] Applicant applicant)
         {
             if (ModelState.IsValid)
             {
                 db.ApplicantDb.Add(applicant);
                 await db.SaveChangesAsync();
-                return RedirectToAction("Success");
+                return RedirectToAction("Index");
             }
 
             return View(applicant);
         }
 
-        // GET: Applicants/Edit/5
+        // GET: SME/Edit/5
         public async Task<ActionResult> Edit(int? id)
         {
             if (id == null)
@@ -83,23 +74,23 @@ namespace WebProgrammingPhase2.Controllers
             return View(applicant);
         }
 
-        // POST: Applicants/Edit/5
+        // POST: SME/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "ID,Name,Education,Department,jobTiltile,Skills")] Applicant applicant)
+        public async Task<ActionResult> Edit([Bind(Include = "Rating,isTop5")] Applicant applicant)
         {
             if (ModelState.IsValid)
             {
                 db.Entry(applicant).State = EntityState.Modified;
                 await db.SaveChangesAsync();
-                return RedirectToAction("Index");
+                return RedirectToAction("Edit");
             }
             return View(applicant);
         }
 
-        // GET: Applicants/Delete/5
+        // GET: SME/Delete/5
         public async Task<ActionResult> Delete(int? id)
         {
             if (id == null)
@@ -114,7 +105,7 @@ namespace WebProgrammingPhase2.Controllers
             return View(applicant);
         }
 
-        // POST: Applicants/Delete/5
+        // POST: SME/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(int id)

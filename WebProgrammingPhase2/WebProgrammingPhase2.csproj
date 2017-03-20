@@ -173,6 +173,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HRPersonnelsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\SMEController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -296,6 +297,8 @@
     <Content Include="Views\Applicants\_ViewStart.cshtml" />
     <Content Include="Views\Applicants\layoutRazor.cshtml" />
     <Content Include="Views\Applicants\Success.cshtml" />
+    <Content Include="Views\Applicants\ViewJobs.cshtml" />
+    <Content Include="Views\SME\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
