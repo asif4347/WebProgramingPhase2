@@ -41,6 +41,10 @@ namespace WebProgrammingPhase2.Controllers
         {
             return View();
         }
+        public ActionResult Success()
+        {
+            return View();
+        }
 
         // POST: Applicants/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
@@ -53,7 +57,7 @@ namespace WebProgrammingPhase2.Controllers
             {
                 db.ApplicantDb.Add(applicant);
                 await db.SaveChangesAsync();
-                return RedirectToAction("Index");
+                return RedirectToAction("Success");
             }
 
             return View(applicant);

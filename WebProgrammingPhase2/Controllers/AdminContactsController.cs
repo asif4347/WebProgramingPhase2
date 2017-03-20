@@ -11,6 +11,7 @@ using WebProgrammingPhase2.Models;
 
 namespace WebProgrammingPhase2.Controllers
 {
+    [Authorize]
     public class AdminContactsController : Controller
     {
         private DataBaseConnetion db = new DataBaseConnetion();

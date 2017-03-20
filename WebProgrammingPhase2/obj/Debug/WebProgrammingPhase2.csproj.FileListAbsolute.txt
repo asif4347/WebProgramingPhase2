@@ -72,3 +72,6 @@ C:\Users\masif\Documents\GitHub\WebProgramingPhase2\WebProgrammingPhase2\obj\Deb
 C:\Users\masif\Documents\GitHub\WebProgramingPhase2\WebProgrammingPhase2\obj\Debug\WebProgrammingPhase2.Migrations.initial.resources
 C:\Users\masif\Documents\GitHub\WebProgramingPhase2\WebProgrammingPhase2\obj\Debug\WebProgrammingPhase2.Migrations.initial2.resources
 C:\Users\masif\Documents\GitHub\WebProgramingPhase2\WebProgrammingPhase2\obj\Debug\WebProgrammingPhase2.Migrations.dateAdded.resources
+C:\Users\masif\Documents\GitHub\WebProgramingPhase2\WebProgrammingPhase2\obj\Debug\WebProgrammingPhase2.Migrations.hiredAdded.resources
+C:\Users\masif\Documents\GitHub\WebProgramingPhase2\WebProgrammingPhase2\obj\Debug\WebProgrammingPhase2.Migrations.atch.resources
+C:\Users\masif\Documents\GitHub\WebProgramingPhase2\WebProgrammingPhase2\obj\Debug\WebProgrammingPhase2.Migrations.aaaaaaaaaaaaa.resources

@@ -12,6 +12,10 @@ namespace WebProgrammingPhase2.Controllers
         {
             return View();
         }
+        public ActionResult RoleSelect()
+        {
+            return View();
+        }
 
         public ActionResult About()
         {

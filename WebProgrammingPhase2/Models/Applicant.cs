@@ -23,12 +23,12 @@ namespace WebProgrammingPhase2.Models
                 return false;
             else if (!sAllowedExt.Contains(file.FileName.Substring(file.FileName.LastIndexOf('.'))))
             {
-                ErrorMessage = "Please upload Your Photo of type: " + string.Join(", ", sAllowedExt);
+                ErrorMessage = "Please upload Your File of type: " + string.Join(", ", sAllowedExt);
                 return false;
             }
             else if (file.ContentLength > maxContent)
             {
-                ErrorMessage = "Your Photo is too large, maximum allowed size is : " + (maxContent / 1024).ToString() + "MB";
+                ErrorMessage = "Your File is too large, maximum allowed size is : " + (maxContent / 1024).ToString() + "MB";
                 return false;
             }
             else
@@ -50,10 +50,13 @@ namespace WebProgrammingPhase2.Models
         [Required]
         public string  Skills { get; set; }
        
-        [Required(ErrorMessage = "Please browse your image")]
-        [Display(Name = "Upload Image")]
-        [NotMapped]
-        [ValidateFile]
-        public HttpPostedFileBase Attachment { get; set; }
+        //[Required(ErrorMessage = "Please browse your image")]
+        //[Display(Name = "Upload Image")]
+        //[NotMapped]
+        //[ValidateFile]
+        //public HttpPostedFileBase Attachment { get; set; }
+        public string  Rating { get; set; }
+        public string isTop5 { get; set; }
+        public string   isHired { get; set; }
     }
 }
